@@ -1,0 +1,53 @@
+{
+  "version": 2,
+  "skills": {
+    "eas-app-stores": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/eas-app-stores/SKILL.md",
+      "computedHash": "3d7a01419697be15a8cbdb20781d12ecbaad31db31f68e35deed14bad9d91eb4"
+    },
+    "eas-hosting": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/eas-hosting/SKILL.md",
+      "computedHash": "e76f619e098e039ac1c85421f3552b6a44f7a57db10e379979bcf9e773ada886"
+    },
+    "eas-update-insights": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/eas-update-insights/SKILL.md",
+      "computedHash": "4eacc9dfe7c9e6375f1dc1e771a682d78150a1ca29c964baece39fd117041db5"
+    },
+    "eas-workflows": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/eas-workflows/SKILL.md",
+      "computedHash": "ee718657f28c50ecfdb28efeb9f39c35b9fcda87d4d8003b8fe0b48d733d9136"
+    },
+    "expo-data-fetching": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/expo-data-fetching/SKILL.md",
+      "computedHash": "e6d81073bbc3698c74d03a5790b68a3d1adcda0c5681da01576651575b64a35d"
+    },
+    "expo-dev-client": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/expo-dev-client/SKILL.md",
+      "computedHash": "e7223bdb38651c4edc41055b0541a9ea42545f19a6cc224a9f8beed1277031b3"
+    },
+    "expo-native-ui": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/expo-native-ui/SKILL.md",
+      "computedHash": "148edf2e5a360703f103203f55d4caf65c1fc96cada11d7fe537b4bc26ccdadd"
+    },
+    "expo-upgrade": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/expo-upgrade/SKILL.md",
+      "computedHash": "64e918ef206f6bfa450a20fb2668371d884c8d1003b6e947d825396da27c9fe0"
+    }
+  }
+}
