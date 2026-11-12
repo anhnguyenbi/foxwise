@@ -1,3 +1,4 @@
+import { useRouter } from "expo-router";
 import { Image, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -6,6 +7,8 @@ import { SpeechBubble } from "@/components/SpeechBubble";
 import { images } from "@/constants/images";
 
 export default function Onboarding() {
+  const router = useRouter();
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#FFFFFF" }}>
       {/* Logo */}
@@ -66,7 +69,10 @@ export default function Onboarding() {
 
       {/* CTA */}
       <View className="px-7 pb-6 pt-4">
-        <PrimaryButton label="Get Started" />
+        <PrimaryButton
+          label="Get Started"
+          onPress={() => router.push("/sign-up")}
+        />
       </View>
     </SafeAreaView>
   );

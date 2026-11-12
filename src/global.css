@@ -94,3 +94,118 @@
 .speech-bubble__tail--right {
   @apply right-5;
 }
+
+/* Auth screens (sign up / sign in) */
+.auth-back {
+  @apply h-11 w-11 items-start justify-center;
+}
+
+.auth-back__chevron {
+  @apply ml-1 h-3.5 w-3.5 rotate-45 border-b-2 border-l-2 border-text-primary;
+}
+
+.auth-title {
+  @apply font-poppins-bold text-[26px] leading-[34px] text-text-primary;
+}
+
+.auth-subtitle {
+  @apply mt-1 font-poppins text-[15px] leading-6 text-text-secondary;
+}
+
+.auth-sparkle {
+  @apply absolute;
+}
+
+.auth-field {
+  @apply h-[74px] justify-center rounded-[20px] border border-[#ECEEF5] bg-white px-5;
+}
+
+.auth-field__label {
+  @apply font-poppins text-[13px] leading-5 text-text-secondary;
+}
+
+.auth-field__input {
+  @apply h-7 p-0 font-poppins text-[16px] text-text-primary;
+}
+
+.auth-field__toggle {
+  @apply absolute right-5 top-0 h-full justify-center;
+}
+
+.auth-button {
+  @apply h-[58px] items-center justify-center rounded-[18px] bg-lingua-deep-purple shadow-lg shadow-lingua-purple/30;
+  background-image: linear-gradient(to right, #5b3bf6, #7b5df8);
+}
+
+.auth-button__label {
+  @apply font-poppins-semibold text-lg text-white;
+}
+
+.auth-divider {
+  @apply mt-5 flex-row items-center gap-3;
+}
+
+.auth-divider__line {
+  @apply h-px flex-1 bg-[#E3E6F0];
+}
+
+.auth-divider__label {
+  @apply font-poppins text-[13px] text-text-secondary;
+}
+
+.social-button {
+  @apply h-[54px] flex-row items-center rounded-[18px] border border-[#ECEEF5] bg-white pl-[35px];
+}
+
+.social-button__icon {
+  @apply h-[30px] w-[30px];
+}
+
+.social-button__label {
+  @apply ml-[29px] font-poppins-medium text-base text-text-primary;
+}
+
+.auth-footer {
+  @apply font-poppins text-[15px] text-text-secondary;
+}
+
+.auth-footer__link {
+  @apply font-poppins-medium text-lingua-purple;
+}
+
+/* Verification modal (small centered popup with 6 code boxes) */
+.code-popup {
+  @apply items-center rounded-[28px] bg-white px-6 pb-6 pt-7;
+}
+
+.code-popup__icon {
+  @apply mb-4 h-16 w-16;
+}
+
+.code-popup__title {
+  @apply text-center font-poppins-bold text-[24px] leading-[32px] text-text-primary;
+}
+
+.code-popup__text {
+  @apply mt-2 text-center font-poppins text-[15px] leading-[24px] text-text-secondary;
+}
+
+.code-popup__resend {
+  @apply mt-5 text-center font-poppins text-[14px] text-text-secondary;
+}
+
+.code-popup__link {
+  @apply font-poppins-medium text-[14px] text-lingua-purple;
+}
+
+.code-box {
+  @apply h-[52px] flex-1 items-center justify-center rounded-2xl border-2 border-border bg-surface;
+}
+
+.code-box--active {
+  @apply border-lingua-purple bg-white;
+}
+
+.code-box__digit {
+  @apply font-poppins-semibold text-[24px] text-text-primary;
+}
