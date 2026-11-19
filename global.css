@@ -1,0 +1,93 @@
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css";
+
+@import "nativewind/theme";
+
+/*
+ * Design tokens
+ * Mirrors src/theme/*.ts — update both when a token changes.
+ */
+@theme {
+  /* Colors: primary */
+  --color-lingua-purple: #6c4ef5;
+  --color-lingua-deep-purple: #5b3bf6;
+  --color-lingua-blue: #4d8bff;
+  --color-lingua-green: #21c16b;
+
+  /* Colors: semantic */
+  --color-success: #21c16b;
+  --color-warning: #ffc800;
+  --color-streak: #ff8a00;
+  --color-error: #ff4d4f;
+  --color-info: #4d8bff;
+
+  /* Colors: neutrals */
+  --color-text-primary: #0d132b;
+  --color-text-secondary: #6b7280;
+  --color-border: #e5e7eb;
+  --color-surface: #f6f7fb;
+  --color-background: #ffffff;
+
+  /* Fonts: React Native needs one font family per weight (no fallback lists) */
+  --font-sans: "Poppins-Regular";
+  --font-poppins: "Poppins-Regular";
+  --font-poppins-medium: "Poppins-Medium";
+  --font-poppins-semibold: "Poppins-SemiBold";
+  --font-poppins-bold: "Poppins-Bold";
+
+  /* Font sizes + line heights */
+  --text-h1: 32px;
+  --text-h1--line-height: 1.2;
+  --text-h2: 24px;
+  --text-h2--line-height: 1.3;
+  --text-h3: 20px;
+  --text-h3--line-height: 1.3;
+  --text-h4: 16px;
+  --text-h4--line-height: 1.4;
+  --text-body-lg: 16px;
+  --text-body-lg--line-height: 1.6;
+  --text-body-md: 14px;
+  --text-body-md--line-height: 1.6;
+  --text-body-sm: 13px;
+  --text-body-sm--line-height: 1.6;
+  --text-caption: 11px;
+  --text-caption--line-height: 1.4;
+}
+
+/*
+ * Typography utilities
+ * Each one sets font family, size and line height from the design system.
+ * Add a color separately, e.g. className="h1 text-text-primary".
+ */
+@utility h1 {
+  @apply font-poppins-bold text-h1;
+}
+
+@utility h2 {
+  @apply font-poppins-semibold text-h2;
+}
+
+@utility h3 {
+  @apply font-poppins-semibold text-h3;
+}
+
+@utility h4 {
+  @apply font-poppins-medium text-h4;
+}
+
+@utility body-lg {
+  @apply font-poppins text-body-lg;
+}
+
+@utility body-md {
+  @apply font-poppins text-body-md;
+}
+
+@utility body-sm {
+  @apply font-poppins text-body-sm;
+}
+
+@utility caption {
+  @apply font-poppins text-caption;
+}
