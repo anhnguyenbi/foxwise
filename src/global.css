@@ -22,6 +22,11 @@
   --color-error: #ff4d4f;
   --color-info: #4d8bff;
 
+  /* Darker semantic shades for small text on white (readable contrast) */
+  --color-success-dark: #15803d;
+  --color-warning-dark: #a15c07;
+  --color-error-dark: #d92d20;
+
   /* Neutrals */
   --color-text-primary: #0d132b;
   --color-text-secondary: #6b7280;
@@ -172,4 +177,103 @@
   right: 16px;
   border-left-width: 16px;
   border-left-color: transparent;
+}
+
+/* ---------- Auth text field (BEM: .auth-field, __label, __input) ---------- */
+
+@utility auth-field {
+  height: 74px;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 16px;
+  border-width: 1px;
+  border-color: #e5e7eb;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(13, 19, 43, 0.04);
+}
+
+@utility auth-field__label {
+  font-family: "Poppins-Regular";
+  font-size: 13px;
+  line-height: 18px;
+  color: #6b7280;
+}
+
+@utility auth-field__input {
+  margin-top: 6px;
+  height: 24px;
+  padding: 0;
+  font-family: "Poppins-Regular";
+  font-size: 16px;
+  color: #0d132b;
+}
+
+/* ---------- Gradient button (BEM: .btn-gradient; label uses .btn-primary__label) ---------- */
+
+@utility btn-gradient {
+  height: 57px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background-image: linear-gradient(90deg, #5b3bf6 0%, #7a62f7 100%);
+}
+
+/* ---------- Social auth button (BEM: .social-btn, __label) ---------- */
+
+@utility social-btn {
+  height: 44px;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 37px;
+  border-radius: 16px;
+  border-width: 1px;
+  border-color: #e5e7eb;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(13, 19, 43, 0.03);
+}
+
+@utility social-btn__label {
+  margin-left: 33px;
+  font-family: "Poppins-SemiBold";
+  font-size: 15px;
+  color: #0d132b;
+}
+
+/* ---------- Divider with centered text (BEM: .divider, __line, __text) ---------- */
+
+@utility divider {
+  flex-direction: row;
+  align-items: center;
+}
+
+@utility divider__line {
+  flex: 1;
+  height: 1px;
+  background-color: #e5e7eb;
+}
+
+@utility divider__text {
+  margin: 0 16px;
+  font-family: "Poppins-Regular";
+  font-size: 15px;
+  line-height: 22px;
+  color: #6b7280;
+}
+
+/* ---------- Verification code box (BEM: .otp-box, __digit). Border/background colors set per state. ---------- */
+
+@utility otp-box {
+  flex: 1;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  border-width: 1.5px;
+}
+
+@utility otp-box__digit {
+  font-family: "Poppins-SemiBold";
+  font-size: 24px;
+  color: #0d132b;
 }

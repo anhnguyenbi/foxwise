@@ -14,6 +14,11 @@ export const colors = {
   error: "#FF4D4F",
   info: "#4D8BFF",
 
+  // Darker semantic shades for small text on white
+  successDark: "#15803D",
+  warningDark: "#A15C07",
+  errorDark: "#D92D20",
+
   // Neutrals
   textPrimary: "#0D132B",
   textSecondary: "#6B7280",
