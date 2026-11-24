@@ -22,6 +22,11 @@
   --color-error: #ff4d4f;
   --color-info: #4d8bff;
 
+  /* Darker semantic shades for small text on white (readable contrast) */
+  --color-success-dark: #15803d;
+  --color-warning-dark: #a15c07;
+  --color-error-dark: #d92d20;
+
   /* Neutrals */
   --color-text-primary: #0d132b;
   --color-text-secondary: #6b7280;
@@ -217,7 +222,7 @@
 /* ---------- Social auth button (BEM: .social-btn, __label) ---------- */
 
 @utility social-btn {
-  height: 52px;
+  height: 44px;
   flex-direction: row;
   align-items: center;
   padding-left: 37px;
@@ -230,7 +235,7 @@
 
 @utility social-btn__label {
   margin-left: 33px;
-  font-family: "Poppins-Medium";
+  font-family: "Poppins-SemiBold";
   font-size: 15px;
   color: #0d132b;
 }
@@ -251,7 +256,7 @@
 @utility divider__text {
   margin: 0 16px;
   font-family: "Poppins-Regular";
-  font-size: 14px;
+  font-size: 15px;
   line-height: 22px;
   color: #6b7280;
 }

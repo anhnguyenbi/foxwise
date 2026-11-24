@@ -9,18 +9,21 @@ type VerificationCodeModalProps = {
   visible: boolean;
   email: string;
   onClose: () => void;
-  // Called once all 6 digits are entered
-  onComplete: (code: string) => void;
+  // Called once all 6 digits are entered. Resolve to false when the code is wrong to clear the boxes.
+  onComplete: (code: string) => Promise<boolean>;
 };
 
 // Bottom sheet that asks for the 6-digit code sent by email. It sits right above the keyboard.
 export function VerificationCodeModal({ visible, email, onClose, onComplete }: VerificationCodeModalProps) {
   const [code, setCode] = useState("");
 
-  const handleChange = (text: string) => {
+  const handleChange = async (text: string) => {
     const digits = text.replace(/\D/g, "").slice(0, CODE_LENGTH);
     setCode(digits);
-    if (digits.length === CODE_LENGTH) onComplete(digits);
+    if (digits.length < CODE_LENGTH) return;
+
+    const isVerified = await onComplete(digits);
+    if (!isVerified) setCode("");
   };
 
   const handleClose = () => {
