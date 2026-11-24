@@ -1,9 +1,123 @@
-:root {
-  --font-display:
-    Spline Sans, Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol, Noto Color Emoji;
-  --font-mono:
-    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-  --font-rounded: 'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif;
-  --font-serif: Georgia, 'Times New Roman', serif;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css";
+
+@import "nativewind/theme";
+
+/*
+ * Design tokens. Mirrors src/theme/colors.ts and src/theme/typography.ts.
+ * Each --color-* becomes bg-*, text-*, border-* ... and each --font-* becomes font-*.
+ */
+@theme {
+  /* Primary */
+  --color-lingua-purple: #6c4ef5;
+  --color-lingua-deep-purple: #5b3bf6;
+  --color-lingua-blue: #4d8bff;
+  --color-lingua-green: #21c16b;
+
+  /* Semantic */
+  --color-success: #21c16b;
+  --color-warning: #ffc800;
+  --color-streak: #ff8a00;
+  --color-error: #ff4d4f;
+  --color-info: #4d8bff;
+
+  /* Neutrals */
+  --color-text-primary: #0d132b;
+  --color-text-secondary: #6b7280;
+  --color-border: #e5e7eb;
+  --color-surface: #f6f7fb;
+  --color-background: #ffffff;
+
+  /* Fonts: React Native needs one font family per weight */
+  --font-sans: "Poppins-Regular";
+  --font-poppins: "Poppins-Regular";
+  --font-poppins-medium: "Poppins-Medium";
+  --font-poppins-semibold: "Poppins-SemiBold";
+  --font-poppins-bold: "Poppins-Bold";
+}
+
+/* ---------- Typography: .h1 .h2 .h3 .h4 .body-lg .body-md .body-sm .caption ---------- */
+
+@utility h1 {
+  font-family: "Poppins-Bold";
+  font-size: 32px;
+  line-height: 38.4px;
+  color: #0d132b;
+}
+
+@utility h2 {
+  font-family: "Poppins-SemiBold";
+  font-size: 24px;
+  line-height: 31.2px;
+  color: #0d132b;
+}
+
+@utility h3 {
+  font-family: "Poppins-SemiBold";
+  font-size: 20px;
+  line-height: 26px;
+  color: #0d132b;
+}
+
+@utility h4 {
+  font-family: "Poppins-Medium";
+  font-size: 16px;
+  line-height: 22.4px;
+  color: #0d132b;
+}
+
+@utility body-lg {
+  font-family: "Poppins-Regular";
+  font-size: 16px;
+  line-height: 25.6px;
+  color: #0d132b;
+}
+
+@utility body-md {
+  font-family: "Poppins-Regular";
+  font-size: 14px;
+  line-height: 22.4px;
+  color: #0d132b;
+}
+
+@utility body-sm {
+  font-family: "Poppins-Regular";
+  font-size: 13px;
+  line-height: 20.8px;
+  color: #6b7280;
+}
+
+@utility caption {
+  font-family: "Poppins-Regular";
+  font-size: 11px;
+  line-height: 15.4px;
+  color: #6b7280;
+}
+
+/* ---------- Surfaces (BEM: .card, .card--flat) ---------- */
+
+@utility card {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 24px;
+  border-width: 1px;
+  border-color: #e5e7eb;
+  box-shadow: 0 8px 24px rgba(13, 19, 43, 0.06);
+}
+
+@utility card--flat {
+  background-color: #f6f7fb;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+/* ---------- Color swatch (design system preview) ---------- */
+
+@utility swatch {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  border-width: 1px;
+  border-color: #e5e7eb;
 }
