@@ -121,3 +121,55 @@
   border-width: 1px;
   border-color: #e5e7eb;
 }
+
+/* ---------- Buttons (BEM: .btn-primary, .btn-primary__label) ---------- */
+
+@utility btn-primary {
+  height: 72px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  background-color: #5b3bf6;
+}
+
+@utility btn-primary__label {
+  font-family: "Poppins-SemiBold";
+  font-size: 18px;
+  color: #ffffff;
+}
+
+/* ---------- Speech bubble (BEM: .speech-bubble, __text, __tail, __tail--left/--right) ---------- */
+
+@utility speech-bubble {
+  border-radius: 24px;
+  padding: 16px 20px;
+}
+
+@utility speech-bubble__text {
+  font-family: "Poppins-Medium";
+  font-size: 18px;
+}
+
+/* A zero-size view whose borders form a triangle; set its color with border-t-* */
+@utility speech-bubble__tail {
+  position: absolute;
+  bottom: -13px;
+  width: 0;
+  height: 0;
+  border-top-width: 14px;
+}
+
+/* Tip points down-left */
+@utility speech-bubble__tail--left {
+  left: 16px;
+  border-right-width: 16px;
+  border-right-color: transparent;
+}
+
+/* Tip points down-right */
+@utility speech-bubble__tail--right {
+  right: 16px;
+  border-left-width: 16px;
+  border-left-color: transparent;
+}
