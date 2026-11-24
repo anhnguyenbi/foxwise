@@ -1,3 +1,4 @@
+import { useRouter } from "expo-router";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Svg, { Defs, Ellipse, RadialGradient, Stop } from "react-native-svg";
@@ -42,6 +43,8 @@ function SpeechBubble({
 }
 
 export default function Onboarding() {
+  const router = useRouter();
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#ffffff" }}>
       {/* Content scrolls on short screens; the button below stays pinned and visible */}
@@ -125,8 +128,7 @@ export default function Onboarding() {
         <TouchableOpacity
           className="btn-primary px-8"
           activeOpacity={0.85}
-          // TODO: navigate to the auth screen once it exists
-          onPress={() => {}}
+          onPress={() => router.push("/sign-up")}
         >
           <Text className="btn-primary__label flex-1 text-center">Get Started</Text>
           <View className="h-3 w-3 -rotate-45 border-b-2 border-r-2 border-white" />
